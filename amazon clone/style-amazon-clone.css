@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    border: border-box;
+    
+}
+.border:hover{
+    border: 2px solid wheat;
+}
+.navbar{
+    height: 100px;
+    background-color: #101212;
+    color: white;
+}
+.navupper{
+    background-color: #0d0f0f;
+    
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+
+}
+#logodiv{
+    height: 50px;
+    width: 113px;
+}
+#logo{
+    height: 60px;
+    width: 113px;
+    background-image: url("logo.jpg");
+    background-size: cover;
+    
+}
+#location{
+    padding-top: 5px;
+    height: 50px;
+    width: 98px;
+}
+#locationlogo{
+    display: flex;
+    padding-left: 3px;
+    align-items: center;
+}
+
+#add-first{
+    margin-left: 15px;
+    color: blueviolet;
+    font-size: 1.1rem;
+}
+#add-sec{
+    font-size: 1.5rem;
+    margin-left: 3px;
+}
+#searchbar{
+    display: flex;
+    margin-left: 10px;
+    background-color: antiquewhite;
+    color: black;
+    height: 40px;
+    width: 100%;
+}
+
+#language{
+    height: 40px;
+    width: 76ssspx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: end;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+#cart{
+    display: flex;
+    font-size: 30px;
+}
+.navlower{
+    height: 40px;
+    background-color: #0f2121;
+    display: flex;
+    color: azure;
+}
+.selectl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 65px;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+#bar{
+    display: flex;
+    
+    align-items: flex-start;
+}
+#bar a {
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+    margin: 10px;
+
+}
+.mainphoto{
+   
+    background-image: url("1i.jpg");
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 0;
+}
+.boxes{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(233, 244, 255)
+    
+    
+}
+/* #heading{
+    display: flex;
+    align-items: center;
+} */
+.box{
+    
+    height: 300px;
+    width: 27%;
+    font-size: 18px;
+    background-color: rgb(233, 244, 255);
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+   
+
+}
+.msg{
+    background-color: aliceblue;
+    font-size: 20px;
+    color: rgb(2, 2, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 1200px;
+    margin-bottom: 25px;
+}
+
+#box-goods{
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    margin-left: 0;
+}
+#box-secondline{
+    margin-left: 20px;
+}
+
+.footer{
+    height: 100px;
+    background-color: #0f2121;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+    justify-content: center;
+}
