@@ -23,11 +23,13 @@ boxes.forEach((box) => {
         
         if (turn === true){ 
             box.innerText = "O";
-        
+            box.style.color = "red";
             turn =  false;
         }else{
             box.innerText = "X";
+            box.style.color = "yellow";
             turn = true;
+
         }
         box.disabled = true;
 
@@ -36,11 +38,7 @@ boxes.forEach((box) => {
 })
 
 
-const boxDisable = () => {
-    for (let box of boxes) {
-        box.disabled = true;
-    }
-};
+
 
 const boxenable = () => {
     for (let box of boxes) {
