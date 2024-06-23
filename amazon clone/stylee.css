@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rgb(72, 72, 94);
+    height: 100px;
+    color: white;
+
+}
+.uppernav{
+    display: flex;
+    justify-items: space-evenly;
+}
+#logo{
+    height: 60px;
+    width: 113px;
+    background-image: url('logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    padding-top: 10px;
+}
+#location{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+#language{
+    height: 40px;
+    width: 80px;
+    padding-top:20px;
+}
+
+#return{
+    height: 60px;
+    width: 80px;
+    padding-top: 7px;
+    font-size: 20px;
+}
+#sign{
+    height: 60px;
+    width: 80px;
+    padding-top: 7px;
+    font-size: 20px;
+}
+#cart{
+    height: 60px;
+    width: 80px;
+    padding-top: 15px;
+    font-size: 20px;
+}
