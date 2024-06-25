@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    background-color: rgb(44, 35, 35);
+    color: white;
+    font-size: 10vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vmin;
+}
+main{
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(157, 172, 172);
+    flex-direction: column;
+}
+.symbols{
+
+    height: 20vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.rock{
+    margin: 4vmin;
+    height: 20vmin;
+    width: 20vmin;
+    background-image: url(stone.png);
+    background-repeat: no-repeat;
+    border-radius: 10vmin; 
+    background-size: cover;   
+}
+.paper{
+    margin: 4vmin;
+    height: 20vmin;
+    width: 20vmin;
+    background-image: url(paper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10vmin;    
+}
+.scissor{
+    margin: 4vmin;
+    height: 20vmin;
+    width: 20vmin;
+    background-image: url(scissor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10vmin;    
+}
+
+.wincounter{
+    height: 20vmin;
+    margin: 4vmin;
+    font-size: 8vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.you{
+    margin-right: 10vmin;
+}
+.theComputer{
+    margin-left: 10vmin;
+}
+
+
+.winboard{
+    height: 20vmin;
+    width: 60vmin;
+    background-color: rgb(212, 243, 87);
+    border-radius: 10vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmin;
+}
