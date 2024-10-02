@@ -1,4 +1,4 @@
-import conf from '../conf.js';
+import conf from '../conf/conf.js';
 import {Client , Account, ID} from "appwrite";
 
 export class AuthService{
@@ -6,8 +6,8 @@ export class AuthService{
     account;
     constructor(){
          this.client
-         .setEndpoint(conf.appwriteUrl)
-         .setProject(conf.appwriteProjectId);
+         .setEndpoint(conf.appWriteUrl)
+         .setProject(conf.appWriteProjectId);
          this.acocunt = new Account(this.client);
     }
 
@@ -49,6 +49,6 @@ export class AuthService{
     }
 }
 
- const authSerive = new AuthService();
+ const authService = new AuthService();
 
- export default authSerive
+ export default authService
