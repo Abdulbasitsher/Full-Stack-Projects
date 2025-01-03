@@ -42,6 +42,7 @@ export default function Header() {
                                 </NavLink>  </li>
                                 <li>
                                  <NavLink
+                                 to='/About'
                                     className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${( isActive ? "text-orange-500" : "text-black-300")} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
