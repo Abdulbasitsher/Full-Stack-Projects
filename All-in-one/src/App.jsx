@@ -1,8 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
-// import './App.css'
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Profile from './Compnents/Profile';
+import Login from './Compnents/Login'; 
 import Card from './Compnents/Card'
 import InputBox from './Compnents/InputBox';
 import UseCurrencyConvertor from './hooks/useCurrencyConvertor';
+import UserContextProvider from './Context/UserContextAPI';
 
 function App() {
   const [amount, setAmount] = useState(0)
@@ -202,7 +204,15 @@ useEffect( () =>  generatePassword(),
                 </form>
             </div>
         </div>
-    </div>
+      </div>
+
+      {/* ContextAPI */}
+      <UserContextProvider>
+        <h1 className='mt-1'>This is for Context API</h1>
+        <Profile />
+        <Login />
+      </UserContextProvider>
+
     );
 
     </div>
