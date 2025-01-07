@@ -5,8 +5,37 @@ import Card from './Compnents/Card'
 import InputBox from './Compnents/InputBox';
 import UseCurrencyConvertor from './hooks/useCurrencyConvertor';
 import UserContextProvider from './Context/UserContextAPI';
+import { TodoProvider } from './Context/TodoContext';
+import TodoItem from './Compnents/TodoItem';
+import TodoForm from './Compnents/TodoForm';
+import { Provider } from 'react-redux';
+import store from './Store/Store';
+import AddTodo from './Compnents/AddTodo';
+import TodoList from './Compnents/TodoList';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (todo) => {
+    setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] )
+  }
+
+  const updateTodo = (id, todo) => {
+    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo )))
+  }
+
+  const deleteTodo = (id) => {  
+    setTodos((prev) => prev.filter((todo) => todo.id !== id)) 
+  }
+
+  const toggleComplete = (id) => {
+    setTodos((prev) => 
+    prev.map((prevTodo) => 
+      prevTodo.id === id ? { ...prevTodo, 
+        completed: !prevTodo.completed } : prevTodo))    
+  }
+
+
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
@@ -207,12 +236,44 @@ useEffect( () =>  generatePassword(),
       </div>
 
       {/* ContextAPI */}
-      <UserContextProvider>
+      <div className="flex flex-col items-center rounded-md border-blue-400 justify-center bg-green-400">
+      <UserContextProvider >
         <h1 className='mt-1'>This is for Context API</h1>
-        <Profile />
-        <Login />
+        <Profile className='rounded-md border-blue-400' />
+        <Login className=''/>
       </UserContextProvider>
+       </div>
+      
+      {/* Todo Project */}
+      <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
+        <div className="bg-[#172842] min-h-screen py-8">
+          <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+              <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
+              <div className="mb-4">
+                  {/* Todo form goes here */} 
+                  <TodoForm />
+              </div>
+              <div className="flex flex-wrap gap-y-3">
+                        {/*Loop and Add TodoItem here */}
+                        {todos.map((todo) => (
+                          <div key={todo.id}
+                          className='w-full'
+                          >
+                            <TodoItem todo={todo} />
+                          </div>
+                        ))}
+                    </div>
+          </div>
+      </div>
+      </TodoProvider>
 
+      {/* React-redux */}
+
+      <Provider store={store}>
+            <h1>React Redux usage learning</h1>
+            <AddTodo/>
+            <TodoList/>
+      </Provider> 
     );
 
     </div>
